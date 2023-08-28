@@ -1,0 +1,260 @@
+$.validator.addMethod('name2', function (value, element) {
+
+     if ($('#name2').val() !='Your Name') {
+
+	 	  return true;
+
+	 }    else return false;
+
+	}, 'Please enter name');
+
+
+
+
+
+$.validator.addMethod('country2', function (value, element) {
+
+     if ($('#country2').val() !='Country') {
+
+	 	  return true;
+
+	 }    else return false;
+
+	}, 'Please enter your country name');
+
+
+
+
+
+$.validator.addMethod('date2', function (value, element) {
+
+     if ($('#date2').val() !='Date of Arrival') {
+
+	 	  return true;
+
+	 }    else return false;
+
+	}, 'Please enter Arrival Date');
+
+
+
+$.validator.addMethod('query2', function (value, element) {
+
+     if ($('#Query').val() !='Query') {
+
+	 	  return true;
+
+	 }    else return false;
+
+	}, 'Please enter query');
+
+$.validator.addMethod('person2', function (value, element) {
+
+     if ($('#person2').val() !='No. of Person') {
+
+	 	  return true;
+
+	 }    else return false;
+
+	}, 'Please enter No. of Person');
+
+
+$.validator.addMethod('duration_of_stay2', function (value, element) {
+
+     if ($('#duration_of_stay2').val() !='Duration of stay') {
+
+	 	  return true;
+
+	 }    else return false;
+
+	}, 'Please enter Duration of stay');
+
+
+
+$(document).ready(function() {
+
+	// validate signup form on keyup and submit
+
+   $("#contactus2").validate({
+
+	rules: { 
+
+		name:{
+
+		required:true,
+
+		name2:true
+
+		},
+
+			email:{
+
+				required:true,
+
+				email:true
+
+			},
+
+			contact:{
+
+			required:true,
+
+			number:true,
+
+			minlength:10
+
+			},
+
+			country:{
+
+			required:true,
+
+			country2:true
+
+			},
+
+			
+
+			date:{
+
+			required:true,
+
+			date2:true
+
+			},
+	
+			Query:{
+
+			required:true,
+
+			query2:true,
+			minlength: 20
+
+			},
+
+			person:{
+
+			required:true,
+
+			person2:true
+			
+
+			},
+
+			duration_of_stay:{
+
+			required:true,
+
+			duration_of_stay2:true
+			
+
+			},
+
+
+			captcha:{
+
+			required:true,
+
+			remote:"https://www.kanha-national-park.com/process.php"
+
+			}
+
+				
+
+				
+
+		},
+
+		messages: {
+
+			name:{
+
+			required:"Please enter name"
+
+			},
+
+			
+
+			email:{
+
+			required:"Please enter email id",
+
+			email:"Please enter valid email id"
+
+			},
+
+			
+
+			contact:{
+
+			required:"Please enter contact number",
+
+			number:"Please enter valid contact number",
+
+			minlength:"Please enter atleast 10 digits"
+
+			},
+
+			
+
+			country:{
+
+			required:"Please enter country name"
+
+			},
+
+			person:{
+
+			required:"Please enter No. of Person"
+
+			},
+   
+
+            duration_of_stay:{
+
+			required:"Please enter duration of stay"
+
+			},
+
+			
+
+			date:{
+
+			required:"Please enter arrival date"
+
+			},
+
+			
+
+			Query:{
+
+			required:"Please enter query",
+			minlength:"Please enter atleast 20 characters"
+
+			},
+
+			
+
+			captcha:{
+
+			required:"Please enter security code",
+
+			remote:"Please enter valid security code"
+
+			}
+
+
+
+		}
+
+	});
+
+});
+
+// JavaScript Document
+
+$("#date2").blur(function(){
+    if($(this).val()!==''){
+  $(this).closest('.row').find('label').hide();
+}
+});

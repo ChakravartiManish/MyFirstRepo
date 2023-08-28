@@ -1,0 +1,10 @@
+
+var slideshow=new TINY.fader.fade('slideshow',{
+	id:'slides',
+	auto:5,
+	resume:true,
+	navid:'pagination',
+	activeclass:'current',
+	visible:true,
+	position:0
+});

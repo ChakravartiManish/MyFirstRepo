@@ -1,0 +1,1 @@
+ddaccordion.init({headerclass:"expandable",contentclass:"categoryitems",revealtype:"click",collapseprev:true,defaultexpanded:[0],onemustopen:false,animatedefault:false,persiststate:false,toggleclass:["","openheader"],togglehtml:["prefix","",""],animatespeed:"normal",oninit:function(headers,expandedindices){},onopenclose:function(header,index,state,isuseractivated){}})

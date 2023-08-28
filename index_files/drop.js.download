@@ -1,0 +1,4 @@
+animatedcollapse.addDiv('jason','fade=1,height=')
+animatedcollapse.addDiv('kelly','fade=1,height=')
+animatedcollapse.ontoggle=function($,divobj,state){}
+animatedcollapse.init()
